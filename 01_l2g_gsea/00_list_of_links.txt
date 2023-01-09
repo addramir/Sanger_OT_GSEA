@@ -1,0 +1,45 @@
+https://gist.github.com/afrendeiro/f554d82c927e2fb4ad95de0c3c865329
+
+https://academic.oup.com/nar/article/44/W1/W90/2499357
+
+https://maayanlab.cloud/Enrichr/#libraries
+
+https://ctg.cncr.nl/software/magma
+
+https://github.com/dgroenewoud/AUG-MAGMA/blob/main/AUG-MAGMA-V1.01.R
+
+https://medium.com/omics-diary/how-to-use-gseapy-for-pathway-enrichment-analysis-67a1aab1002d
+
+https://ctg.cncr.nl/software/MAGMA/doc/manual_v1.10.pdf
+
+
+c2.all) and go terms (c5.bp, c5.cc and c5.mf
+
+'c2.all.v2022.1.Hs.symbols.gmt',
+'c5.go.bp.v2022.1.Hs.symbols.gmt',
+'c5.go.cc.v2022.1.Hs.symbols.gmt',
+'c5.go.mf.v2022.1.Hs.symbols.gmt'
+
+
+c1.all.v2022.1.Hs.entrez.gmt               c3.mir.mirdb.v2022.1.Hs.entrez.gmt        c5.go.mf.v2022.1.Hs.entrez.gmt
+c1.all.v2022.1.Hs.symbols.gmt              c3.mir.mirdb.v2022.1.Hs.symbols.gmt       c5.go.mf.v2022.1.Hs.symbols.gmt
+c2.all.v2022.1.Hs.entrez.gmt               c3.mir.v2022.1.Hs.entrez.gmt              c5.go.v2022.1.Hs.entrez.gmt
+c2.all.v2022.1.Hs.symbols.gmt              c3.mir.v2022.1.Hs.symbols.gmt             c5.go.v2022.1.Hs.symbols.gmt
+c2.cgp.v2022.1.Hs.entrez.gmt               c3.tft.gtrd.v2022.1.Hs.entrez.gmt         c5.hpo.v2022.1.Hs.entrez.gmt
+c2.cgp.v2022.1.Hs.symbols.gmt              c3.tft.gtrd.v2022.1.Hs.symbols.gmt        c5.hpo.v2022.1.Hs.symbols.gmt
+c2.cp.biocarta.v2022.1.Hs.entrez.gmt       c3.tft.tft_legacy.v2022.1.Hs.entrez.gmt   c6.all.v2022.1.Hs.entrez.gmt
+c2.cp.biocarta.v2022.1.Hs.symbols.gmt      c3.tft.tft_legacy.v2022.1.Hs.symbols.gmt  c6.all.v2022.1.Hs.symbols.gmt
+c2.cp.kegg.v2022.1.Hs.entrez.gmt           c3.tft.v2022.1.Hs.entrez.gmt              c7.all.v2022.1.Hs.entrez.gmt
+c2.cp.kegg.v2022.1.Hs.symbols.gmt          c3.tft.v2022.1.Hs.symbols.gmt             c7.all.v2022.1.Hs.symbols.gmt
+c2.cp.pid.v2022.1.Hs.entrez.gmt            c4.all.v2022.1.Hs.entrez.gmt              c7.immunesigdb.v2022.1.Hs.entrez.gmt
+c2.cp.pid.v2022.1.Hs.symbols.gmt           c4.all.v2022.1.Hs.symbols.gmt             c7.immunesigdb.v2022.1.Hs.symbols.gmt
+c2.cp.reactome.v2022.1.Hs.entrez.gmt       c4.cgn.v2022.1.Hs.entrez.gmt              c7.vax.v2022.1.Hs.entrez.gmt
+c2.cp.reactome.v2022.1.Hs.symbols.gmt      c4.cgn.v2022.1.Hs.symbols.gmt             c7.vax.v2022.1.Hs.symbols.gmt
+c2.cp.v2022.1.Hs.entrez.gmt                c4.cm.v2022.1.Hs.entrez.gmt               c8.all.v2022.1.Hs.entrez.gmt
+c2.cp.v2022.1.Hs.symbols.gmt               c4.cm.v2022.1.Hs.symbols.gmt              c8.all.v2022.1.Hs.symbols.gmt
+c2.cp.wikipathways.v2022.1.Hs.entrez.gmt   c5.all.v2022.1.Hs.entrez.gmt              h.all.v2022.1.Hs.entrez.gmt
+c2.cp.wikipathways.v2022.1.Hs.symbols.gmt  c5.all.v2022.1.Hs.symbols.gmt             h.all.v2022.1.Hs.symbols.gmt
+c3.all.v2022.1.Hs.entrez.gmt               c5.go.bp.v2022.1.Hs.entrez.gmt            msigdb.v2022.1.Hs.entrez.gmt
+c3.all.v2022.1.Hs.symbols.gmt              c5.go.bp.v2022.1.Hs.symbols.gmt           msigdb.v2022.1.Hs.symbols.gmt
+c3.mir.mir_legacy.v2022.1.Hs.entrez.gmt    c5.go.cc.v2022.1.Hs.entrez.gmt
+c3.mir.mir_legacy.v2022.1.Hs.symbols.gmt   c5.go.cc.v2022.1.Hs.symbols.gmt
