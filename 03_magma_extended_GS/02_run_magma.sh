@@ -2,11 +2,15 @@ cd /mnt/disk1/data/GS_233IDs/
 
 path2csv=/mnt/disk1/data/GS_233IDs/to_magma/
 path2save=/mnt/disk1/data/GS_233IDs/GSA_magma/
+
+
 gw=$(ls $path2csv)
 
-gw_ex=$(ls /mnt/disk1/data/GS_124IDs/to_magma/)
+gw_ex=$(ls /mnt/disk1/data/GS_233IDs/GSA_magma/*raw)
 
 ls $path2csv > /mnt/disk1/data/GS_233IDs/gw.txt
+
+
 ls /mnt/disk1/data/GS_124IDs/to_magma/ > /mnt/disk1/data/GS_233IDs/gw_ex.txt
 comm -3 gw.txt gw_ex.txt | tr -d ' \t' > diff.txt
 dff=$(cat diff.txt)
