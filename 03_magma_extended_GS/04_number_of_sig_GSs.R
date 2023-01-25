@@ -1,21 +1,31 @@
+setwd("~/projects/Sanger_OT_GoldStandards/")
+path2GSA="/mnt/disk1/data/GS_233IDs/GSA_out/"
+path2save="~/projects/GSEA/Sanger_OT_GSEA/03_magma_extended_GS/"
+
 library(data.table)
 
-genes=fread("~/projects/GSEA/03_magma_124IDs/ENSG_h38_gene_list.txt",data.table=F)
+genes=fread("ENSG_h38_gene_list.txt",data.table=F)
 colnames(genes)=c("gene_id","chr","start","end","strand")
-GS=fread("~/projects/GS_with_biggest_GWASid.txt",data.table=F)
-SI=fread("~/projects/study_index.csv",data.table=F)
+GS=fread("./02_extended_GS/GS_with_biggest_GWASid.txt",data.table=F)
+gs_ids=names(table(GS$the_biggest_GWAS_id))
+gs_ids=gs_ids[gs_ids!=""]
+
+SI=fread("./02_extended_GS/study_index.csv",data.table=F)
 
 load("~/projects/GSEA/03_magma_124IDs/10677_GS_tables.RData")
 gss=table(y)
 gss_null=rep(0,length(gss))
 names(gss_null)=names(gss)
 
-l=list.files("/mnt/disk1/data/GS_124IDs/GSA_out/",pattern="gsa.out")
-
+l=list.files(path2GSA,pattern="gsa.out")
+list_l=gsub(l,pattern=".csv.gsa.out",replacement="")
+table(gs_ids%in%list_l)
+l=l[list_l%in%gs_ids]
+f=l[1]
 
 for (f in l){
 	print(f)
-	x=fread(paste0("/mnt/disk1/data/GS_124IDs/GSA_out/",f),data.table=F,skip=4)
+	x=fread(paste0(path2GSA,f),data.table=F,skip=4)
 	pval=x[,7]
 	pval=p.adjust(pval)
 
@@ -30,7 +40,7 @@ for (f in l){
 
 	ind=which(pval<=0.05)
 
-	if ((!is.na(ncas) & ncas>=1000 & length(ind)>0)|(is.na(ncas) & length(ind)>0))
+	if (length(ind)>0)
 	{
 		ind=which(pval<=0.05)
 		ind=which(crp[,2]%in%x[ind,8])
@@ -49,7 +59,6 @@ for (f in l){
 		genes=cbind(genes,gss_out)
 		colnames(genes)[ncol(genes)]=efo
 	}
-
 }
 
-fwrite("~/projects/GSEA/03_magma_124IDs/genes_GSA_results_efo.txt",x=genes)
+fwrite(paste0(path2save,"/genes_GSA_results_efo.txt"),x=genes)
