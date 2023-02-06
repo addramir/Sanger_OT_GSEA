@@ -14,7 +14,19 @@ spark = (
     .getOrCreate()
 )
 
+FM=spark.read.parquet("/mnt/disks/gwas/features.raw.221011.parquet")
+
+
+
 list_files=!ls /mnt/disks/gwas/magma_GBA/*.genes.out
+gids=[x.replace("/mnt/disks/gwas/magma_GBA/","") for x in list_files]
+gids=[x.replace(".genes.out","") for x in gids]
+
+FM=FM.filter(FM.study_id.isin(gids))
+l=FM.select('study_id').distinct().toPandas()
+
+
+
 
 path=list_files[0]
 #df = spark.read.option("header",'True').option('delimiter', '\s*').csv(path)
