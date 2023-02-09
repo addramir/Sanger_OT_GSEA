@@ -63,4 +63,6 @@ for (f in gids){
 	}
 }
 
-fwrite(paste0(path2save,"/20220207_GSA_Results.csv"),x=FM,sep=",")
+FM[is.na(FM[,3]),3]=0
+
+fwrite(paste0(path2save,"/20230208_GSA_Results.csv"),x=FM,sep=",")
